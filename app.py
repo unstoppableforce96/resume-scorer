@@ -4,7 +4,7 @@ import json
 
 st.set_page_config(page_title="Résumé Scorer", layout="wide")
 
-st.title("Résumé vs JD Fit Scorer")
+st.title("Résumé vs JD Fit Scorer - Vibe Coded by Pavan B")
 st.caption("Day 5 Lab 5A — Gemini + Continue.dev + Streamlit")
 
 col1, col2 = st.columns(2)
