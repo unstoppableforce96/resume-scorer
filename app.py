@@ -15,12 +15,13 @@ with col1:
 with col2:
     jd = st.text_area("Paste job description", height=400)
 
-api_key = st.text_input("Gemini API key", type="password")
-
 try:
     api_key = st.secrets["GEMINI_API_KEY"]
 except Exception:
-    pass
+    api_key = None
+
+if not api_key:
+    st.error("Gemini API key is not configured. Add GEMINI_API_KEY to Streamlit secrets.")
 
 if st.button("Score") and resume and jd and api_key:
     with st.spinner("Scoring..."):
